@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STARRE PRODUCTION - MyStream</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            My<span>Stream</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Series</a>
+            <a href="#">About</a>
+        </nav>
+
+        <button class="login-btn">Login</button>
+
+    </header>
+
+
+    <main>
+
+        <section class="movie-details">
+
+            <div class="movie-poster">
+
+                <img
+                    src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80"
+                    alt="Movie Night">
+
+            </div>
+
+
+            <div class="movie-description">
+
+                <p class="small-title">MYSTREAM ORIGINAL</p>
+
+                <h1>Movie Night</h1>
+
+                <div class="movie-rating">
+                    ⭐ 8.7/10 &nbsp; • &nbsp; 2026 &nbsp; • &nbsp; Drama
+                </div>
+
+                <p>
+                    Movie Night is a story about friendship, dreams,
+                    and the unexpected adventures that happen when
+                    a group of friends decide to spend one unforgettable
+                    night together.
+                </p>
+
+                <p>
+                    Get ready for laughter, mystery, and moments
+                    you'll never forget.
+                </p>
+
+                <div class="details-buttons">
+
+                    <button class="watch-btn" onclick="startMovie()">
+                        ▶ Watch Movie
+                    </button>
+
+                    <button class="info-btn">
+                        ❤️ Add to List
+                    </button>
+
+                </div>
+
+            </div>
+
+<div id="moviePlayer" style="display: none;">
+    <h2>🎬 Movie Player</h2>
+    <video controls width="800">
+        <source src="./movie.mp4" type="video/mp4">
+    </video>
+</div>
+        </section>
+
+    </main>
+
+
+<script>
+function startMovie() {
+    document.getElementById("moviePlayer").style.display = "block";
+}
+</script>
