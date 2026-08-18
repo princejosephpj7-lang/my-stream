@@ -369,51 +369,34 @@
     </section>
 
 
-    <script>
+   <script>
 
-        function playEpisode(episode) {
+function playEpisode(episode) {
 
-            const video =
-                document.getElementById("episode-video");
+    const video = document.getElementById("episode-video");
 
-            const title =
-                document.getElementById("episode-title");
+    const title = document.getElementById("episode-title");
 
-            /*
-             * TEMPORARY VIDEOS
-             * We will replace these with the real
-             * Deni episode links later.
-             */
+    const episodes = {
+        1: "https://www.youtube.com/embed/drsdD71C_us",
+        2: "https://www.youtube.com/embed/5z0zLfPdH9Y",
+        3: "https://www.youtube.com/embed/kcpyH6rWj5s",
+        4: "https://www.youtube.com/embed/51PI53ieBLk",
+        5: "https://www.youtube.com/embed/YDm2FV3bNkI"
+    };
 
-            const episodes = {
+    video.src = episodes[episode];
 
-                1: "https://www.youtube.com/embed/I9TeSB3DQPU",
+    title.textContent =
+        "Deni — Season 1 Episode " + episode + " 🎬";
 
-                2: "https://www.youtube.com/embed/I9TeSB3DQPU",
+    document.getElementById("episode-player").scrollIntoView({
+        behavior: "smooth"
+    });
 
-                3: "https://www.youtube.com/embed/I9TeSB3DQPU",
+}
 
-                4: "https://www.youtube.com/embed/I9TeSB3DQPU",
-
-                5: "https://www.youtube.com/embed/I9TeSB3DQPU"
-
-            };
-
-            video.src = episodes[episode];
-
-            title.textContent =
-                "Deni — Season 1 Episode " + episode + " 🎬";
-
-            document
-                .getElementById("episode-player")
-                .scrollIntoView({
-                    behavior: "smooth"
-                });
-
-        }
-
-    </script>
-
+</script>
 
 </body>
 
