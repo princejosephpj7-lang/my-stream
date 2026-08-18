@@ -29,7 +29,6 @@
 
     </header>
 
-
     <main>
 
         <section class="movie-details">
@@ -41,7 +40,6 @@
                     alt="Movie Night">
 
             </div>
-
 
             <div class="movie-description">
 
@@ -67,7 +65,7 @@
 
                 <div class="details-buttons">
 
-                    <button class="watch-btn" onclick="startMovie()">
+                    <button class="watch-btn" onclick="watchMovie()">
                         ▶ Watch Movie
                     </button>
 
@@ -79,19 +77,15 @@
 
             </div>
 
-<div id="moviePlayer" style="display: none;">
-    <h2>🎬 Movie Player</h2>
-    <video controls width="800">
-        <source src="./movie.mp4" type="video/mp4">
-    </video>
-</div>
         </section>
 
     </main>
 
+    <script>
+        function watchMovie() {
+            window.open("https://youtu.be/I9TeSB3DQPU", "_blank");
+        }
+    </script>
 
-<script>
-function startMovie() {
-    document.getElementById("moviePlayer").style.display = "block";
-}
-</script>
+</body>
+</html>
